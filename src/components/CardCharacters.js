@@ -13,9 +13,12 @@ const CardCharacters = ({ character }) => {
             className="card"
             onClick={async () => {
               try {
-                const response = await axios.get("http://localhost:3000/id", {
-                  headers: { id: character.id },
-                });
+                const response = await axios.get(
+                  "https://marvel-backend-app.herokuapp.com/id",
+                  {
+                    headers: { id: character.id },
+                  }
+                );
                 console.log(response.data.results);
                 history.push("/id", { characterId: response.data.results });
               } catch (error) {

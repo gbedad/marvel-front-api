@@ -1,31 +1,224 @@
-.App {
+body {
+  background-color: black;
+  font-family: "Comic Neue", cursive;
+}
+
+.header {
+  margin: 0 auto;
+  color: #ffffff;
+}
+.logo {
+  width: 1024px;
+  margin: 0 auto;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo img {
+  height: 200px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  color: #ffffff;
+}
+ul {
+  width: 600px;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+Link {
+  text-decoration: none;
+  color: #ffffff;
+}
+li {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
 }
 
+.characters,
+.comics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 1024px;
+  margin: 30px auto;
+}
+.card {
+  width: 200px;
+  height: 350px;
+  border: 1px solid red;
+  border-radius: 5px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(80, 79, 79);
+}
+.card:hover {
+  box-shadow: 5px 5px 8px 5px rgba(205, 32, 32, 0.8);
+  transition-property: all;
+  transform: scale(1.1);
+  transition: ease-in-out;
+  transition-duration: 400ms;
+  cursor: pointer;
+}
+.card .name {
+  width: 200px;
+  height: 40px;
+  background-color: #ffffff;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
+}
+.card h3 {
+  font-size: 16px;
+  font-weight: 600;
+
+  margin: 5px 0;
+  background-color: #ffffff;
+}
+.card .description {
+  display: flex;
+  justify-content: center;
+  padding: 6px;
+  height: 90px;
+  overflow-y: scroll;
+}
+
+.card .description::-webkit-scrollbar {
+  display: none;
+}
+.card p {
+  font-size: 11px;
+  font-weight: 400;
+  color: #ffffff;
+}
+.comics {
+  color: #ffffff;
+}
+.page {
+  max-width: 410px;
+  color: #000000;
+
+  display: flex;
+  margin: 15px auto;
+  overflow-x: scroll;
+}
+.pages::-webkit-scrollbar {
+  display: none;
+}
+.pages {
+  -ms-overflow-style: none;
+}
+.listComics {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 1024px;
+  margin: 5px auto;
+  line-height: 25px;
+}
+.listComics h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ff1200;
+  margin-bottom: 10px;
+}
+.cardCover {
+  box-sizing: border-box;
+  width: 150px;
+  height: 330px;
+  border: 1px solid red;
+  border-radius: 5px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(80, 79, 79);
+}
+.cardCover:hover {
+  box-shadow: 5px 5px 8px 5px rgba(205, 32, 32, 0.8);
+  transition-property: all;
+  transform: scale(1.1);
+  transition: ease-in-out;
+  transition-duration: 400ms;
+  cursor: pointer;
+}
+.cardCover .name {
+  width: 150px;
+  height: 40px;
+  background-color: #ffffff;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardCover img {
+  width: 150px;
+  height: 250px;
+  object-fit: cover;
+  object-position: top;
+}
+.card h3 {
+  font-size: 16px;
+  font-weight: 600;
+
+  margin: 5px 0;
+  background-color: #ffffff;
+}
+/* 
+.cardMini {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 1024px;
+  margin: 30px auto;
+} */
+/* .listComics:hover {
+  box-shadow: 5px 5px 8px 5px rgba(205, 32, 32, 0.8);
+  transition-property: all;
+  transform: scale(1.1);
+  transition: ease-in-out;
+  transition-duration: 400ms;
+  cursor: pointer;
+} */
+.listComics img {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  object-position: top;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+/**LOGO SPIN DOWLOADING**/
+.App-logo {
+  height: 100px;
+  pointer-events: none;
+  margin-left: calc(50% - 50px);
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
